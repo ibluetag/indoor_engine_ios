@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>iIndoorMapDelegate Protocol Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1333)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">ibt_indoor </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">imapview</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/POISelected:">- POISelected:</option>
+		
+		<option value="//api/name/buildingSwitchWithID:">- buildingSwitchWithID:</option>
+		
+		<option value="//api/name/buildingSwitchWithObject:">- buildingSwitchWithObject:</option>
+		
+		<option value="//api/name/floorSwitchWithID:">- floorSwitchWithID:</option>
+		
+		<option value="//api/name/floorSwitchWithObject:">- floorSwitchWithObject:</option>
+		
+		<option value="//api/name/mapLoadErrorWithExhibit:Err:">- mapLoadErrorWithExhibit:Err:</option>
+		
+		<option value="//api/name/mapLoadFinishedWithExhibit:Floor:">- mapLoadFinishedWithExhibit:Floor:</option>
+		
+		<option value="//api/name/routeFinished:">- routeFinished:</option>
+		
+		<option value="//api/name/routeOutOfPath">- routeOutOfPath</option>
+		
+		<option value="//api/name/routeShowModeBackward">- routeShowModeBackward</option>
+		
+		<option value="//api/name/routeShowModeEnter">- routeShowModeEnter</option>
+		
+		<option value="//api/name/routeShowModeExit">- routeShowModeExit</option>
+		
+		<option value="//api/name/routeShowModeForward">- routeShowModeForward</option>
+		
+		<option value="//api/name/updateCurrentZoomRatio:">- updateCurrentZoomRatio:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">iIndoorMapDelegate Protocol Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Conforms to</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>iIndoorMapDelegate.h</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>协议</p>
+
+<p>地图相关的事件回调。</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/mapLoadFinishedWithExhibit:Floor:" title="mapLoadFinishedWithExhibit:Floor:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/mapLoadFinishedWithExhibit:Floor:">&ndash;&nbsp;mapLoadFinishedWithExhibit:Floor:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>地图加载成功后回调</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)mapLoadFinishedWithExhibit:(int)<em>exhibitID</em> Floor:(int)<em>floorID</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>exhibitID</code></th>
+						<td><p>加载的地图主体id;
+floorID 加载的地图当前的floor ID</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>无</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">iIndoorMapDelegate.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/mapLoadErrorWithExhibit:Err:" title="mapLoadErrorWithExhibit:Err:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/mapLoadErrorWithExhibit:Err:">&ndash;&nbsp;mapLoadErrorWithExhibit:Err:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>地图加载失败后回调</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)mapLoadErrorWithExhibit:(int)<em>exhibitID</em> Err:(int)<em>errCode</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>exhibitID</code></th>
+						<td><p>加载的地图主体id;
+errCode 错误代码</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>无</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">iIndoorMapDelegate.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/buildingSwitchWithID:" title="buildingSwitchWithID:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/buildingSwitchWithID:">&ndash;&nbsp;buildingSwitchWithID:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>事件: 切换到某一个building</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)buildingSwitchWithID:(int)<em>id</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>id</code></th>
+						<td><p>building的id</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>无</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">iIndoorMapDelegate.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/buildingSwitchWithObject:" title="buildingSwitchWithObject:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/buildingSwitchWithObject:">&ndash;&nbsp;buildingSwitchWithObject:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>事件: 切换到某一个building</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)buildingSwitchWithObject:(iIndoorMapBuilding *)<em>building</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>building</code></th>
+						<td><p><a href="../Classes/iIndoorMapBuilding.html">iIndoorMapBuilding</a> 对象</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>无</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">iIndoorMapDelegate.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/floorSwitchWithID:" title="floorSwitchWithID:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/floorSwitchWithID:">&ndash;&nbsp;floorSwitchWithID:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>事件: 切换到某一层</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)floorSwitchWithID:(int)<em>id</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>id</code></th>
+						<td><p>floor的id</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>无</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">iIndoorMapDelegate.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/floorSwitchWithObject:" title="floorSwitchWithObject:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/floorSwitchWithObject:">&ndash;&nbsp;floorSwitchWithObject:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>事件: 切换到某一层</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)floorSwitchWithObject:(iIndoorMapFloor *)<em>floor</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>floor</code></th>
+						<td><p><a href="../Classes/iIndoorMapFloor.html">iIndoorMapFloor</a> 对象</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>无</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">iIndoorMapDelegate.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/POISelected:" title="POISelected:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/POISelected:">&ndash;&nbsp;POISelected:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>事件: 某个poi被选中</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)POISelected:(iIndoorMapPOI *)<em>poi</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>poi</code></th>
+						<td><p>POI对象</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>无</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">iIndoorMapDelegate.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/updateCurrentZoomRatio:" title="updateCurrentZoomRatio:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/updateCurrentZoomRatio:">&ndash;&nbsp;updateCurrentZoomRatio:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>事件: 当前缩放比例更新</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)updateCurrentZoomRatio:(float)<em>ratio</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>ratio</code></th>
+						<td><p>当前缩放比例</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>无</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">iIndoorMapDelegate.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/routeFinished:" title="routeFinished:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/routeFinished:">&ndash;&nbsp;routeFinished:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>事件:导航完成</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)routeFinished:(iIndoorMapRouteResult *)<em>result</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>result</code></th>
+						<td><p>保存导航结果,为nil表示导航失败</p>
+
+<p>@return</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">iIndoorMapDelegate.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/routeOutOfPath" title="routeOutOfPath"></a>
+	<h3 class="method-title"><code><a href="#//api/name/routeOutOfPath">&ndash;&nbsp;routeOutOfPath</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>事件:定位点偏离导航路线</p>
+
+<p>@param 无</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)routeOutOfPath</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>无</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">iIndoorMapDelegate.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/routeShowModeEnter" title="routeShowModeEnter"></a>
+	<h3 class="method-title"><code><a href="#//api/name/routeShowModeEnter">&ndash;&nbsp;routeShowModeEnter</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>事件:进入导航结果展示模式</p>
+
+<p>@param  无</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)routeShowModeEnter</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>无</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">iIndoorMapDelegate.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/routeShowModeExit" title="routeShowModeExit"></a>
+	<h3 class="method-title"><code><a href="#//api/name/routeShowModeExit">&ndash;&nbsp;routeShowModeExit</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>事件:退出导航结果展示模式</p>
+
+<p>@param 无</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)routeShowModeExit</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>无</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">iIndoorMapDelegate.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/routeShowModeForward" title="routeShowModeForward"></a>
+	<h3 class="method-title"><code><a href="#//api/name/routeShowModeForward">&ndash;&nbsp;routeShowModeForward</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>事件:在导航结果展示模式下,前进到导航路径当前地图的下一层地图</p>
+
+<p>@param 无</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)routeShowModeForward</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>无</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">iIndoorMapDelegate.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/routeShowModeBackward" title="routeShowModeBackward"></a>
+	<h3 class="method-title"><code><a href="#//api/name/routeShowModeBackward">&ndash;&nbsp;routeShowModeBackward</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>事件:在导航结果展示模式下,后退到导航路径当前梯度的上一层地图</p>
+
+<p>@param 无</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)routeShowModeBackward</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>无</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">iIndoorMapDelegate.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2015 imapview. All rights reserved. Updated: 2015-08-07</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>
