@@ -53,4 +53,22 @@
  */
 - (id) initWithID:(int)fId;
 
+/**
+ * @brief 打印出floor对象的信息
+ *
+ * @param 无
+ *
+ * @return 无
+ */
+- (void) print;
+
+/**
+ * @brief 判断楼层是否有多区域。
+ *
+ * @param 无
+ *
+ * @return 有多区返回YES
+ */
+- (BOOL) hasMultiAreas;
+
 @end

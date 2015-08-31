@@ -70,9 +70,13 @@
 		
 		<option value="//api/name/floorSwitchWithObject:">- floorSwitchWithObject:</option>
 		
-		<option value="//api/name/mapLoadErrorWithExhibit:Err:">- mapLoadErrorWithExhibit:Err:</option>
+		<option value="//api/name/mapDownloadFailure:Err:">- mapDownloadFailure:Err:</option>
 		
-		<option value="//api/name/mapLoadFinishedWithExhibit:Floor:">- mapLoadFinishedWithExhibit:Floor:</option>
+		<option value="//api/name/mapDownloadSuccess:">- mapDownloadSuccess:</option>
+		
+		<option value="//api/name/mapLoadErrorWithID:Err:">- mapLoadErrorWithID:Err:</option>
+		
+		<option value="//api/name/mapLoadFinishedWithID:Floor:">- mapLoadFinishedWithID:Floor:</option>
 		
 		<option value="//api/name/routeFinished:">- routeFinished:</option>
 		
@@ -140,8 +144,8 @@
 
 						<div class="task-list">
 							<div class="section-method">
-	<a name="//api/name/mapLoadFinishedWithExhibit:Floor:" title="mapLoadFinishedWithExhibit:Floor:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/mapLoadFinishedWithExhibit:Floor:">&ndash;&nbsp;mapLoadFinishedWithExhibit:Floor:</a></code>
+	<a name="//api/name/mapLoadFinishedWithID:Floor:" title="mapLoadFinishedWithID:Floor:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/mapLoadFinishedWithID:Floor:">&ndash;&nbsp;mapLoadFinishedWithID:Floor:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -151,12 +155,12 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>地图加载成功后回调</p>
+				<p>事件:地图加载成功后</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)mapLoadFinishedWithExhibit:(int)<em>exhibitID</em> Floor:(int)<em>floorID</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)mapLoadFinishedWithID:(int)<em>id</em> Floor:(int)<em>floorID</em></code></div>
 
 		    
 			
@@ -165,7 +169,7 @@
 				<table class="argument-def parameter-def">
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>exhibitID</code></th>
+						<th scope="row" class="argument-name"><code>id</code></th>
 						<td><p>加载的地图主体id;
 floorID 加载的地图当前的floor ID</p></td>
 					</tr>
@@ -199,8 +203,8 @@ floorID 加载的地图当前的floor ID</p></td>
 		</div>
 	</div>
 </div><div class="section-method">
-	<a name="//api/name/mapLoadErrorWithExhibit:Err:" title="mapLoadErrorWithExhibit:Err:"></a>
-	<h3 class="method-title"><code><a href="#//api/name/mapLoadErrorWithExhibit:Err:">&ndash;&nbsp;mapLoadErrorWithExhibit:Err:</a></code>
+	<a name="//api/name/mapLoadErrorWithID:Err:" title="mapLoadErrorWithID:Err:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/mapLoadErrorWithID:Err:">&ndash;&nbsp;mapLoadErrorWithID:Err:</a></code>
 </h3>
 
 	<div class="method-info">
@@ -210,12 +214,12 @@ floorID 加载的地图当前的floor ID</p></td>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>地图加载失败后回调</p>
+				<p>事件:地图加载失败</p>
 			</div>
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (void)mapLoadErrorWithExhibit:(int)<em>exhibitID</em> Err:(int)<em>errCode</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (void)mapLoadErrorWithID:(int)<em>id</em> Err:(int)<em>errCode</em></code></div>
 
 		    
 			
@@ -224,8 +228,125 @@ floorID 加载的地图当前的floor ID</p></td>
 				<table class="argument-def parameter-def">
 				
 					<tr>
-						<th scope="row" class="argument-name"><code>exhibitID</code></th>
+						<th scope="row" class="argument-name"><code>id</code></th>
 						<td><p>加载的地图主体id;
+errCode 错误代码</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>无</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">iIndoorMapDelegate.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/mapDownloadSuccess:" title="mapDownloadSuccess:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/mapDownloadSuccess:">&ndash;&nbsp;mapDownloadSuccess:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>事件: 地图下载成功</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)mapDownloadSuccess:(int)<em>id</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>id</code></th>
+						<td><p>地图主体的id</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>无</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">iIndoorMapDelegate.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/mapDownloadFailure:Err:" title="mapDownloadFailure:Err:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/mapDownloadFailure:Err:">&ndash;&nbsp;mapDownloadFailure:Err:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>事件: 地图下载失败</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)mapDownloadFailure:(int)<em>id</em> Err:(int)<em>errCode</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>id</code></th>
+						<td><p>地图主体的id
 errCode 错误代码</p></td>
 					</tr>
 				
@@ -913,7 +1034,7 @@ errCode 错误代码</p></td>
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2015 imapview. All rights reserved. Updated: 2015-08-07</p>
+						<p class="copyright">Copyright &copy; 2015 imapview. All rights reserved. Updated: 2015-08-14</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>

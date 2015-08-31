@@ -31,6 +31,8 @@
     [defaultValues setObject:[NSNumber numberWithFloat:DEFAULT_ROUTE_ATTACH_THRESHOLD] forKey:@"routeAttachThreshold"];
     [defaultValues setObject:[NSNumber numberWithFloat:DEFAULT_ROUTE_DEVIATE_THRESHOLD] forKey:@"routeDeviateThreshold"];
     [defaultValues setObject:[NSNumber numberWithInt:DEFAULT_ROUTE_RULE] forKey:@"routeRule"];
+    [defaultValues setObject:[NSNumber numberWithInt:DEFAULT_ROUTE_SMOOTH] forKey:@"routeSmooth"];
+    [defaultValues setObject:[NSNumber numberWithInt:AREA_ALL] forKey:@"initialArea"];
     [userDefaults registerDefaults:defaultValues];
     [userDefaults synchronize];
     return YES;

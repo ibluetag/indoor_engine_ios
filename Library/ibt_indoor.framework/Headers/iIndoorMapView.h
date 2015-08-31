@@ -10,6 +10,7 @@
 #import "iIndoorMapDelegate.h"
 #import "iIndoorMapViewOption.h"
 #import "iIndoorMapInfoWindow.h"
+#import "iIndoorMapData.h"
 
 /** 类
  *
@@ -17,7 +18,7 @@
  */
 @interface iIndoorMapView : UIView
 
-@property (nonatomic, assign) iIndoorMapViewOption *mapViewOption;
+@property (nonatomic, strong) iIndoorMapViewOption *mapViewOption;
 
 /**
  * @brief 初始化方法
@@ -44,13 +45,61 @@
  */
 - (void)destroyMap;
 /**
- * @brief 加载某个展会的地图
+ * @brief 加载某个场馆的地图
  *
- * @param mapID 展会id
+ * @param mapID 场馆id
  *
  * @return 无
  */
 - (void)loadMap:(int)mapID;
+/**
+ * @brief 加载某个场馆的地图,加载成功后显示指定楼层
+ *
+ * @param mapID 场馆id
+ *        floorID 地图楼层的id
+ *
+ * @return 无
+ */
+- (void)loadMap:(int)mapID WithFloor: (int)floorID;
+/**
+ * @brief 加载某个场馆的地图,加载成功后显示指定楼层,并且选中指定标签对应的POI
+ *        设置POI标签参数须同时保证楼层id为有效值才能正确加载显示
+ *
+ * @param mapID 场馆id
+ *        floorID 地图楼层的id
+ *        label POI在地图中的label
+ *
+ * @return 无
+ */
+- (void)loadMap:(int)mapID WithFloor: (int)floorID POISelected:(NSString*)label;
+/**
+ * @brief 加载某个场馆的地图,加载成功后显示指定楼层,并且显示从当前位置到指定标签对应POI的导航路径
+ *        设置POI标签参数须同时保证楼层id为有效值才能正确加载显示
+ *
+ * @param mapID 场馆id
+ *        floorID 地图楼层的id
+ *        label POI在地图中的label
+ *
+ * @return 无
+ */
+- (void)loadMap:(int)mapID WithFloor: (int)floorID POIRouting:(NSString*)label;
+/**
+ * @brief 下载某个场馆的地图
+ *        该函数为异步操作, 成功/失败均会回调
+ *
+ * @param mapID 场馆id
+ *
+ * @return 无
+ */
+- (void)downloadMap:(int)mapID;
+/**
+ * @brief 检查某个场馆的地图是否在服务器上有更新
+ *
+ * @param mapID 场馆id
+ *
+ * @return true表示有更新,false表示没有更新
+ */
+- (BOOL)checkUpdateForMap:(int)mapID;
 /**
  * @brief 暂停地图，用于地图在后台的情况
  *
@@ -180,13 +229,21 @@
  */
 - (float)getCurrentRotateAngle;
 /**
+ * @brief 获取建筑物与地理正北向的角度
+ *
+ * @param 无
+ *
+ * @return 建筑物与地理正北向的角度
+ */
+- (float)getOriginalAngle;
+/**
  * @brief 放大/缩小当前地图
  *
  * @param step 大于0放大，小于0缩小
  *
  * @return 返回0为成功，否则失败
  */
-- (int)scaleMap:(int)step;
+- (int)scaleMap:(float)step;
 /**
  * @brief 旋转当前地图
  *
@@ -195,6 +252,17 @@
  * @return 返回0为成功，否则失败
  */
 - (int)rotateMap:(float)angle;
+/**
+ * @brief 按照指定中心点、缩放比、旋转角显示当前地图
+ *
+ * @param x 中心点横坐标，单位为像素
+ * @param y 中心点纵坐标，单位为像素
+ * @param angle 相对于原始地图尺寸的缩放比
+ * @param scale 旋转角度
+ *
+ * @return 返回0为成功，否则失败
+ */
+- (int)layoutMapPositionX:(float)x Y:(float)y WithScale:(float)scale AndAngle:(float)angle;
 /**
  * @brief 当前地图内查找
  *
@@ -219,6 +287,10 @@
  * @return 无
  */
 - (void)setLocateTarget:(NSString *)mac;
+//for test
+//- (int) doLoatingWithFloorID: (int) id X: (float) x Y: (float) y;
+//- (int) clearLocating;
+
 /**
  * @brief 设置路径吸附距离阈值。
  *
@@ -243,6 +315,14 @@
  * @return 无
  */
 - (void)setRouteRule:(int)rule;
+/**
+ * @brief 开启导航模式下定位点平滑移动。
+ *
+ * @param enable 开启置为YES
+ *
+ * @return 无
+ */
+- (void)enableSmoothRoute:(BOOL)enable;
 /**
  * @brief 获取native map view
  *

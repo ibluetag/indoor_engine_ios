@@ -19,24 +19,43 @@
 @protocol iIndoorMapDelegate <NSObject>
 
 /**
- * @brief 地图加载成功后回调
+ * @brief 事件:地图加载成功后
  *
- * @param exhibitID 加载的地图主体id;
+ * @param id 加载的地图主体id;
  *        floorID 加载的地图当前的floor ID
  *
  * @return 无
  */
-@optional - (void)mapLoadFinishedWithExhibit:(int) exhibitID Floor: (int) floorID;
+@optional - (void)mapLoadFinishedWithID:(int) id Floor: (int) floorID;
 
 /**
- * @brief 地图加载失败后回调
+ * @brief 事件:地图加载失败
  *
- * @param exhibitID 加载的地图主体id;
+ * @param id 加载的地图主体id;
  *        errCode 错误代码
  *
  * @return 无
  */
-@optional - (void)mapLoadErrorWithExhibit:(int) exhibitID Err: (int) errCode;
+@optional - (void)mapLoadErrorWithID:(int) id Err: (int) errCode;
+
+/**
+ * @brief 事件: 地图下载成功
+ *
+ * @param id 地图主体的id
+ *
+ * @return 无
+ */
+@optional - (void)mapDownloadSuccess:(int) id;
+
+/**
+ * @brief 事件: 地图下载失败
+ *
+ * @param id 地图主体的id
+ *        errCode 错误代码
+ *
+ * @return 无
+ */
+@optional - (void)mapDownloadFailure:(int) id Err: (int) errCode;
 
 /**
  * @brief 事件: 切换到某一个building

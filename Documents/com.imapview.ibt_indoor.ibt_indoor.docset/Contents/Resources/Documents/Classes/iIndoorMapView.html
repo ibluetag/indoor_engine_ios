@@ -62,7 +62,13 @@
 		
 		<option value="//api/name/addMapInfoWindow:">- addMapInfoWindow:</option>
 		
+		<option value="//api/name/checkUpdateForMap:">- checkUpdateForMap:</option>
+		
 		<option value="//api/name/destroyMap">- destroyMap</option>
+		
+		<option value="//api/name/downloadMap:">- downloadMap:</option>
+		
+		<option value="//api/name/enableSmoothRoute:">- enableSmoothRoute:</option>
 		
 		<option value="//api/name/getCurBuildingName">- getCurBuildingName</option>
 		
@@ -86,6 +92,8 @@
 		
 		<option value="//api/name/getNativeMapView">- getNativeMapView</option>
 		
+		<option value="//api/name/getOriginalAngle">- getOriginalAngle</option>
+		
 		<option value="//api/name/getUnitDescription:">- getUnitDescription:</option>
 		
 		<option value="//api/name/getUnitName:">- getUnitName:</option>
@@ -98,7 +106,15 @@
 		
 		<option value="//api/name/initWithFrame:">- initWithFrame:</option>
 		
+		<option value="//api/name/layoutMapPositionX:Y:WithScale:AndAngle:">- layoutMapPositionX:Y:WithScale:AndAngle:</option>
+		
 		<option value="//api/name/loadMap:">- loadMap:</option>
+		
+		<option value="//api/name/loadMap:WithFloor:">- loadMap:WithFloor:</option>
+		
+		<option value="//api/name/loadMap:WithFloor:POIRouting:">- loadMap:WithFloor:POIRouting:</option>
+		
+		<option value="//api/name/loadMap:WithFloor:POISelected:">- loadMap:WithFloor:POISelected:</option>
 		
 		<option value="//api/name/pauseMap">- pauseMap</option>
 		
@@ -353,7 +369,7 @@
 			
 			
 			<div class="method-subsection brief-description">
-				<p>加载某个展会的地图</p>
+				<p>加载某个场馆的地图</p>
 			</div>
 			
 		    
@@ -368,7 +384,7 @@
 				
 					<tr>
 						<th scope="row" class="argument-name"><code>mapID</code></th>
-						<td><p>展会id</p></td>
+						<td><p>场馆id</p></td>
 					</tr>
 				
 				</table>
@@ -379,6 +395,304 @@
 			<div class="method-subsection return">
 				<h4 class="method-subtitle parameter-title">Return Value</h4>
 				<p>无</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">iIndoorMapView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/loadMap:WithFloor:" title="loadMap:WithFloor:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/loadMap:WithFloor:">&ndash;&nbsp;loadMap:WithFloor:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>加载某个场馆的地图,加载成功后显示指定楼层</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)loadMap:(int)<em>mapID</em> WithFloor:(int)<em>floorID</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>mapID</code></th>
+						<td><p>场馆id
+floorID 地图楼层的id</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>无</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">iIndoorMapView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/loadMap:WithFloor:POISelected:" title="loadMap:WithFloor:POISelected:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/loadMap:WithFloor:POISelected:">&ndash;&nbsp;loadMap:WithFloor:POISelected:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>加载某个场馆的地图,加载成功后显示指定楼层,并且选中指定标签对应的POI
+设置POI标签参数须同时保证楼层id为有效值才能正确加载显示</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)loadMap:(int)<em>mapID</em> WithFloor:(int)<em>floorID</em> POISelected:(NSString *)<em>label</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>mapID</code></th>
+						<td><p>场馆id
+floorID 地图楼层的id
+label POI在地图中的label</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>无</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">iIndoorMapView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/loadMap:WithFloor:POIRouting:" title="loadMap:WithFloor:POIRouting:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/loadMap:WithFloor:POIRouting:">&ndash;&nbsp;loadMap:WithFloor:POIRouting:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>加载某个场馆的地图,加载成功后显示指定楼层,并且显示从当前位置到指定标签对应POI的导航路径
+设置POI标签参数须同时保证楼层id为有效值才能正确加载显示</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)loadMap:(int)<em>mapID</em> WithFloor:(int)<em>floorID</em> POIRouting:(NSString *)<em>label</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>mapID</code></th>
+						<td><p>场馆id
+floorID 地图楼层的id
+label POI在地图中的label</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>无</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">iIndoorMapView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/downloadMap:" title="downloadMap:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/downloadMap:">&ndash;&nbsp;downloadMap:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>下载某个场馆的地图
+该函数为异步操作, 成功/失败均会回调</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)downloadMap:(int)<em>mapID</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>mapID</code></th>
+						<td><p>场馆id</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>无</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">iIndoorMapView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/checkUpdateForMap:" title="checkUpdateForMap:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/checkUpdateForMap:">&ndash;&nbsp;checkUpdateForMap:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>检查某个场馆的地图是否在服务器上有更新</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)checkUpdateForMap:(int)<em>mapID</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>mapID</code></th>
+						<td><p>场馆id</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>true表示有更新,false表示没有更新</p>
 			</div>
 			
 
@@ -1218,6 +1532,54 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/getOriginalAngle" title="getOriginalAngle"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getOriginalAngle">&ndash;&nbsp;getOriginalAngle</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>获取建筑物与地理正北向的角度</p>
+
+<p>@param 无</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (float)getOriginalAngle</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>建筑物与地理正北向的角度</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">iIndoorMapView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/scaleMap:" title="scaleMap:"></a>
 	<h3 class="method-title"><code><a href="#//api/name/scaleMap:">&ndash;&nbsp;scaleMap:</a></code>
 </h3>
@@ -1234,7 +1596,7 @@
 			
 		    
 
-			<div class="method-subsection method-declaration"><code>- (int)scaleMap:(int)<em>step</em></code></div>
+			<div class="method-subsection method-declaration"><code>- (int)scaleMap:(float)<em>step</em></code></div>
 
 		    
 			
@@ -1303,6 +1665,79 @@
 					<tr>
 						<th scope="row" class="argument-name"><code>angle</code></th>
 						<td><p>地图向顺时针旋转angle弧度</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>返回0为成功，否则失败</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">iIndoorMapView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/layoutMapPositionX:Y:WithScale:AndAngle:" title="layoutMapPositionX:Y:WithScale:AndAngle:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/layoutMapPositionX:Y:WithScale:AndAngle:">&ndash;&nbsp;layoutMapPositionX:Y:WithScale:AndAngle:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>按照指定中心点、缩放比、旋转角显示当前地图</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (int)layoutMapPositionX:(float)<em>x</em> Y:(float)<em>y</em> WithScale:(float)<em>scale</em> AndAngle:(float)<em>angle</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>x</code></th>
+						<td><p>中心点横坐标，单位为像素</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>y</code></th>
+						<td><p>中心点纵坐标，单位为像素</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>scale</code></th>
+						<td><p>旋转角度</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>angle</code></th>
+						<td><p>相对于原始地图尺寸的缩放比</p></td>
 					</tr>
 				
 				</table>
@@ -1672,6 +2107,64 @@
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/enableSmoothRoute:" title="enableSmoothRoute:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/enableSmoothRoute:">&ndash;&nbsp;enableSmoothRoute:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>开启导航模式下定位点平滑移动。</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)enableSmoothRoute:(BOOL)<em>enable</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>enable</code></th>
+						<td><p>开启置为YES</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>无</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">iIndoorMapView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/getNativeMapView" title="getNativeMapView"></a>
 	<h3 class="method-title"><code><a href="#//api/name/getNativeMapView">&ndash;&nbsp;getNativeMapView</a></code>
 </h3>
@@ -1964,7 +2457,7 @@
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2015 imapview. All rights reserved. Updated: 2015-08-07</p>
+						<p class="copyright">Copyright &copy; 2015 imapview. All rights reserved. Updated: 2015-08-14</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>

@@ -37,4 +37,13 @@
  */
 @property (nonatomic, assign) float y;
 
+/**
+ * @brief 打印出poi对象的信息
+ *
+ * @param 无
+ *
+ * @return 无
+ */
+- (void) print;
+
 @end

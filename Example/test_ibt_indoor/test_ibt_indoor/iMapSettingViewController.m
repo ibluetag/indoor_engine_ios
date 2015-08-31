@@ -7,8 +7,9 @@
 //
 
 #import "iMapSettingViewController.h"
+#import <ibt_indoor/iIndoorMapData.h>
 
-@interface iMapSettingViewController () <UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource>
+@interface iMapSettingViewController () <UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource, iIndoorMapDataDelegate>
 {
     UIScrollView    *_scrollView;
     UITextField     *_mapServerTF;
@@ -21,6 +22,13 @@
     UIToolbar       *_routeRuleInputAccessoryView;
     NSArray         *_routeRuleData;
     NSInteger       _currentRouteRule;
+    UISwitch        *_routeSmootherSwitch;
+
+    UIButton		*_testButton1;
+    UIButton		*_testButton2;
+    UIButton		*_testButton3;
+    UIButton		*_testButton4;
+    UIButton		*_testButton5;
 }
 @end
 
@@ -47,7 +55,7 @@
     [self addMapSubjectIdView];
     [self addLocateTargetView];
     [self addRouteSettingView];
-    
+    [self addTestButtons];
     [self loadUserDefaults];
 }
 
@@ -143,6 +151,168 @@
     _routeRuleInputAccessoryView.items = [NSArray arrayWithObject:doneBtn];
     _routeRuleTF.inputAccessoryView = _routeRuleInputAccessoryView;
     [routeRuleView addSubview:_routeRuleTF];
+    
+    // route smoother
+    UIView *routeSmootherView = [[UIView alloc] initWithFrame:CGRectMake(0, 300, self.view.frame.size.width, 50)];
+    [_scrollView addSubview:routeSmootherView];
+    UILabel *routeSmootherLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 0, UI_SETTING_LABEL_WIDTH_LARGE, 50)];
+    routeSmootherLabel.text = @"开启导航模式平滑移动";
+    [routeSmootherView addSubview:routeSmootherLabel];
+    _routeSmootherSwitch = [[UISwitch alloc] initWithFrame:CGRectMake(UI_SETTING_LABEL_WIDTH_LARGE + 20, 10, routeSmootherView.frame.size.width - UI_SETTING_LABEL_WIDTH_LARGE - 20 - 10, 30)];
+    [_routeSmootherSwitch setOn:NO];
+    [_routeSmootherSwitch addTarget:self action:nil forControlEvents:UIControlEventValueChanged];
+    [routeSmootherView addSubview:_routeSmootherSwitch];
+}
+
+- (void) addTestButtons {
+    if (_testButton1 == nil) {
+        _testButton1 = [[UIButton alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - UI_TEST_BUTTON_HEIGHT, UI_TEST_BUTTON_WIDTH, UI_TEST_BUTTON_HEIGHT)];
+        [_testButton1 setTitle:@"测试选中店铺" forState:UIControlStateNormal];
+        _testButton1.titleLabel.font = [UIFont systemFontOfSize:10];
+        [_testButton1 setTitleColor:[UIColor groupTableViewBackgroundColor] forState:UIControlStateDisabled];
+        [_testButton1 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        _testButton1.layer.borderColor = [UIColor lightGrayColor].CGColor;
+        _testButton1.layer.borderWidth = 1.0f;
+        _testButton1.backgroundColor = [UIColor whiteColor];
+        [_testButton1 addTarget:self action:@selector(buttonTest1) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:_testButton1];
+    }
+    if (_testButton2 == nil) {
+        _testButton2 = [[UIButton alloc] initWithFrame:CGRectMake(UI_TEST_BUTTON_WIDTH, self.view.frame.size.height - UI_TEST_BUTTON_HEIGHT, UI_TEST_BUTTON_WIDTH, UI_TEST_BUTTON_HEIGHT)];
+        [_testButton2 setTitle:@"测试导航至店铺" forState:UIControlStateNormal];
+        _testButton2.titleLabel.font = [UIFont systemFontOfSize:10];
+        [_testButton2 setTitleColor:[UIColor groupTableViewBackgroundColor] forState:UIControlStateDisabled];
+        [_testButton2 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        _testButton2.layer.borderColor = [UIColor lightGrayColor].CGColor;
+        _testButton2.layer.borderWidth = 1.0f;
+        _testButton2.backgroundColor = [UIColor whiteColor];
+        [_testButton2 addTarget:self action:@selector(buttonTest2) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:_testButton2];
+    }
+    if (_testButton3 == nil) {
+        _testButton3 = [[UIButton alloc] initWithFrame:CGRectMake(UI_TEST_BUTTON_WIDTH*2, self.view.frame.size.height - UI_TEST_BUTTON_HEIGHT, UI_TEST_BUTTON_WIDTH, UI_TEST_BUTTON_HEIGHT)];
+        [_testButton3 setTitle:@"测试全部POI" forState:UIControlStateNormal];
+        _testButton3.titleLabel.font = [UIFont systemFontOfSize:10];
+        [_testButton3 setTitleColor:[UIColor groupTableViewBackgroundColor] forState:UIControlStateDisabled];
+        [_testButton3 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        _testButton3.layer.borderColor = [UIColor lightGrayColor].CGColor;
+        _testButton3.layer.borderWidth = 1.0f;
+        _testButton3.backgroundColor = [UIColor whiteColor];
+        [_testButton3 addTarget:self action:@selector(buttonTest3) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:_testButton3];
+    }
+    if (_testButton4 == nil) {
+        _testButton4 = [[UIButton alloc] initWithFrame:CGRectMake(UI_TEST_BUTTON_WIDTH*3, self.view.frame.size.height - UI_TEST_BUTTON_HEIGHT, UI_TEST_BUTTON_WIDTH, UI_TEST_BUTTON_HEIGHT)];
+        [_testButton4 setTitle:@"测试地图选项" forState:UIControlStateNormal];
+        _testButton4.titleLabel.font = [UIFont systemFontOfSize:10];
+        [_testButton4 setTitleColor:[UIColor groupTableViewBackgroundColor] forState:UIControlStateDisabled];
+        [_testButton4 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        _testButton4.layer.borderColor = [UIColor lightGrayColor].CGColor;
+        _testButton4.layer.borderWidth = 1.0f;
+        _testButton4.backgroundColor = [UIColor whiteColor];
+        [_testButton4 addTarget:self action:@selector(buttonTest4) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:_testButton4];
+    }
+    if (_testButton5 == nil) {
+        _testButton5 = [[UIButton alloc] initWithFrame:CGRectMake(UI_TEST_BUTTON_WIDTH*4, self.view.frame.size.height - UI_TEST_BUTTON_HEIGHT, UI_TEST_BUTTON_WIDTH, UI_TEST_BUTTON_HEIGHT)];
+        [_testButton5 setTitle:@"测试地图下载" forState:UIControlStateNormal];
+        _testButton5.titleLabel.font = [UIFont systemFontOfSize:10];
+        [_testButton5 setTitleColor:[UIColor groupTableViewBackgroundColor] forState:UIControlStateDisabled];
+        [_testButton5 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        _testButton5.layer.borderColor = [UIColor lightGrayColor].CGColor;
+        _testButton5.layer.borderWidth = 1.0f;
+        _testButton5.backgroundColor = [UIColor whiteColor];
+        [_testButton5 addTarget:self action:@selector(buttonTest5) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:_testButton5];
+    }
+
+}
+
+-(void) buttonTest1
+{
+    int floorID = 42, eventID = 1;
+    NSString *label = @"B8103";
+
+    [self.mapView loadMap:eventID WithFloor:floorID POISelected:label];
+    NSMutableDictionary *dict = [[NSMutableDictionary alloc]init];
+    [dict setObject:MAP_LOAD_MODE_POI_SELECT forKey:@"mapLoadMode"];
+    [dict setObject:[NSNumber numberWithInt:floorID] forKey:@"mapLoadInitFloorId"];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"SettingFinish" object:nil userInfo:dict];
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+-(void) buttonTest2
+{
+    
+    int floorID = 10, eventID = 1;
+    NSString *label = @"C8012";
+
+    //[self.mapView doLoatingWithFloorID:41 X:100.0 Y:200.0];
+    [self.mapView loadMap:eventID WithFloor:floorID POIRouting:label];
+    NSMutableDictionary *dict = [[NSMutableDictionary alloc]init];
+    [dict setObject:MAP_LOAD_MODE_POI_ROUTE forKey:@"mapLoadMode"];
+    [dict setObject:[NSNumber numberWithInt:floorID] forKey:@"mapLoadInitFloorId"];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"SettingFinish" object:nil userInfo:dict];
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+-(void) buttonTest3
+{
+    //[iIndoorMapData getAllFloors:1 WithDelegate:self];
+    [iIndoorMapData getAllPOIs:1 WithDelegate:self];
+    //[self.mapView doLoatingWithFloorID:41 X:500 Y:400.0];
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+-(void) onFloors:(NSArray *) floors
+{
+    if (floors !=nil){
+        NSLog(@"%s: size=%d",__FUNCTION__, floors.count);
+        for (int index=0; index < floors.count; index++)
+        {
+            iIndoorMapFloor *floor = [floors objectAtIndex:index];
+            [floor print];
+        }
+    }
+    else {
+        NSLog(@"%s: no floor found", __FUNCTION__);
+    }
+}
+
+-(void) onPOIs:(NSArray *) pois
+{
+    if (pois !=nil){
+        NSLog(@"%s: poi size=%d",__FUNCTION__, pois.count);
+        for (int index=0; index < pois.count; index++)
+        {
+            iIndoorMapPOI *poi = [pois objectAtIndex:index];
+            //[poi print];
+        }
+    }
+    else {
+        NSLog(@"%s: no poi found", __FUNCTION__);
+    }
+}
+
+-(void) buttonTest4
+{
+    iIndoorMapViewOption *option = [[iIndoorMapViewOption alloc]init];
+    option.enableFloorSelectView = false;
+    option.enableScaleView = false;
+
+    [self.mapView setMapViewOption:option];
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+-(void) buttonTest5
+{
+    iIndoorMapViewOption *option = [[iIndoorMapViewOption alloc]init];
+    option.enableFloorSelectView = true;
+    option.enableScaleView = true;
+    [self.mapView setMapViewOption:option];
+
+    [self.mapView downloadMap:5];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void) onRouteRuleConfirm {
@@ -187,6 +357,7 @@
     [userDefaults setFloat:[routeAttachThreshold floatValue] forKey:@"routeAttachThreshold"];
     [userDefaults setFloat:[routeDeviateThreshold floatValue] forKey:@"routeDeviateThreshold"];
     [userDefaults setInteger:_currentRouteRule forKey:@"routeRule"];
+    [userDefaults setInteger:[_routeSmootherSwitch isOn] forKey:@"routeSmooth"];
 
     [userDefaults synchronize];
 }
@@ -202,11 +373,14 @@
     _routeDeviateThresholdTF.text = [NSString stringWithFormat:@"%.1f", [userDefaultes floatForKey:@"routeDeviateThreshold"]];
     _currentRouteRule = [userDefaultes integerForKey:@"routeRule"];
     _routeRuleTF.text = [_routeRuleData objectAtIndex:_currentRouteRule];
+    [_routeSmootherSwitch setOn:([userDefaultes integerForKey:@"routeSmooth"] != 0)];
 }
 
 - (void)backClick {
     [self saveUserDefaults];
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"SettingFinish" object:nil userInfo:nil];
+    NSMutableDictionary *dict = [[NSMutableDictionary alloc]init];
+    [dict setObject:MAP_LOAD_MODE_NORMAL forKey:@"mapLoadMode"];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"SettingFinish" object:nil userInfo:dict];
     [self keyboardDisappear];
     [self.navigationController popViewControllerAnimated:YES];
 }

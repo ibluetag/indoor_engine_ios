@@ -128,13 +128,17 @@
 		<data>
 		KKIKVI9UcqxZblWqUHSA/nC3phY=
 		</data>
+		<key>Headers/iIndoorMapData.h</key>
+		<data>
+		wicXI1fUWmwTkKfQewVICttnyo8=
+		</data>
 		<key>Headers/iIndoorMapDelegate.h</key>
 		<data>
-		LpmdePMEont3lr3s7m1w3x0AhmA=
+		WrlmOUnTOedJTOz5x1/zb6Gny10=
 		</data>
 		<key>Headers/iIndoorMapFloor.h</key>
 		<data>
-		bSibgEfwGt+I+N3xlsqsUTw0OjQ=
+		iWUHIZ9+b6e5ehXPh10+tI29rmY=
 		</data>
 		<key>Headers/iIndoorMapInfoWindow.h</key>
 		<data>
@@ -142,7 +146,7 @@
 		</data>
 		<key>Headers/iIndoorMapPOI.h</key>
 		<data>
-		nGZrs75h5vS7TY5CPWyKOdwRWDA=
+		7nP042NX9ez0ssDOYwDisswXxfQ=
 		</data>
 		<key>Headers/iIndoorMapPOIRoute.h</key>
 		<data>
@@ -154,7 +158,7 @@
 		</data>
 		<key>Headers/iIndoorMapView.h</key>
 		<data>
-		SRPpMh9UsN6Ms5t1c78n/KZ09l4=
+		FFCbK5DITlzzUwPfMFPUT5dTMHM=
 		</data>
 		<key>Headers/iIndoorMapViewOption.h</key>
 		<data>
@@ -391,13 +395,17 @@
 		<data>
 		KKIKVI9UcqxZblWqUHSA/nC3phY=
 		</data>
+		<key>Headers/iIndoorMapData.h</key>
+		<data>
+		wicXI1fUWmwTkKfQewVICttnyo8=
+		</data>
 		<key>Headers/iIndoorMapDelegate.h</key>
 		<data>
-		LpmdePMEont3lr3s7m1w3x0AhmA=
+		WrlmOUnTOedJTOz5x1/zb6Gny10=
 		</data>
 		<key>Headers/iIndoorMapFloor.h</key>
 		<data>
-		bSibgEfwGt+I+N3xlsqsUTw0OjQ=
+		iWUHIZ9+b6e5ehXPh10+tI29rmY=
 		</data>
 		<key>Headers/iIndoorMapInfoWindow.h</key>
 		<data>
@@ -405,7 +413,7 @@
 		</data>
 		<key>Headers/iIndoorMapPOI.h</key>
 		<data>
-		nGZrs75h5vS7TY5CPWyKOdwRWDA=
+		7nP042NX9ez0ssDOYwDisswXxfQ=
 		</data>
 		<key>Headers/iIndoorMapPOIRoute.h</key>
 		<data>
@@ -417,7 +425,7 @@
 		</data>
 		<key>Headers/iIndoorMapView.h</key>
 		<data>
-		SRPpMh9UsN6Ms5t1c78n/KZ09l4=
+		FFCbK5DITlzzUwPfMFPUT5dTMHM=
 		</data>
 		<key>Headers/iIndoorMapViewOption.h</key>
 		<data>
