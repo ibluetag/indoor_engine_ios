@@ -284,7 +284,7 @@
     [_southAreaBtn setHidden:YES];
     [_allAreaBtn setHidden:YES];
     [_northAreaBtn setHidden:YES];
-    
+
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     _curArea = (int)[userDefaults integerForKey:@"initialArea"];
     [self updateAreaBtns];
