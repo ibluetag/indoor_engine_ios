@@ -10,7 +10,7 @@
 #import "iIndoorMapViewController.h"
 #import "iMapSettingViewController.h"
 @interface AppDelegate ()
-
+@property (nonatomic, strong) iIndoorMapViewController *mapviewController;
 @end
 
 @implementation AppDelegate
@@ -18,8 +18,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    iIndoorMapViewController *mapVC = [[iIndoorMapViewController alloc] init];
-    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:mapVC];
+    _mapviewController = [[iIndoorMapViewController alloc] init];
+    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:_mapviewController];
     [self.window setRootViewController:nvc];
     [self.window makeKeyAndVisible];
     
@@ -46,10 +46,12 @@
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    [_mapviewController enterBackgroundMode];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    [_mapviewController resumeFromBackgroundMode];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {

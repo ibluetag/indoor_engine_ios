@@ -70,6 +70,8 @@
 		
 		<option value="//api/name/enableSmoothRoute:">- enableSmoothRoute:</option>
 		
+		<option value="//api/name/enableStats:">- enableStats:</option>
+		
 		<option value="//api/name/getCurBuildingName">- getCurBuildingName</option>
 		
 		<option value="//api/name/getCurrentFloorID">- getCurrentFloorID</option>
@@ -118,9 +120,13 @@
 		
 		<option value="//api/name/pauseMap">- pauseMap</option>
 		
+		<option value="//api/name/reInitMapView">- reInitMapView</option>
+		
 		<option value="//api/name/registerEventListener:">- registerEventListener:</option>
 		
 		<option value="//api/name/removeMapInfoWindow:">- removeMapInfoWindow:</option>
+		
+		<option value="//api/name/resumeMap">- resumeMap</option>
 		
 		<option value="//api/name/rotateMap:">- rotateMap:</option>
 		
@@ -283,6 +289,54 @@
 				
 				</table>
 			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>无</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">iIndoorMapView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/reInitMapView" title="reInitMapView"></a>
+	<h3 class="method-title"><code><a href="#//api/name/reInitMapView">&ndash;&nbsp;reInitMapView</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>重新初始化地图</p>
+
+<p>@param 无</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)reInitMapView</code></div>
+
+		    
 			
 
 			
@@ -725,7 +779,7 @@ label POI在地图中的label</p></td>
 			
 			
 			<div class="method-subsection brief-description">
-				<p>暂停地图，用于地图在后台的情况</p>
+				<p>暂停地图，用于处理地图进入后台</p>
 
 <p>@param 无</p>
 			</div>
@@ -733,6 +787,54 @@ label POI在地图中的label</p></td>
 		    
 
 			<div class="method-subsection method-declaration"><code>- (void)pauseMap</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>无</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">iIndoorMapView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/resumeMap" title="resumeMap"></a>
+	<h3 class="method-title"><code><a href="#//api/name/resumeMap">&ndash;&nbsp;resumeMap</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>恢复地图，用于地图从后台恢复</p>
+
+<p>@param 无</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)resumeMap</code></div>
 
 		    
 			
@@ -2165,6 +2267,64 @@ label POI在地图中的label</p></td>
 		</div>
 	</div>
 </div><div class="section-method">
+	<a name="//api/name/enableStats:" title="enableStats:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/enableStats:">&ndash;&nbsp;enableStats:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>控制SDK统计信息开关，如采集异常信息用于解决兼容性问题及优化体验，默认为开启。</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)enableStats:(BOOL)<em>enabled</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>enable</code></th>
+						<td><p>开启置为YES</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>无</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">iIndoorMapView.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
 	<a name="//api/name/getNativeMapView" title="getNativeMapView"></a>
 	<h3 class="method-title"><code><a href="#//api/name/getNativeMapView">&ndash;&nbsp;getNativeMapView</a></code>
 </h3>
@@ -2457,7 +2617,7 @@ label POI在地图中的label</p></td>
 				<footer>
 					<div class="footer-copyright">
 						
-						<p class="copyright">Copyright &copy; 2015 imapview. All rights reserved. Updated: 2015-08-21</p>
+						<p class="copyright">Copyright &copy; 2015 imapview. All rights reserved. Updated: 2015-09-07</p>
 						
 						
 						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1333)</a>.</p>

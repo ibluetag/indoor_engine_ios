@@ -47,23 +47,23 @@
     self.hidesBottomBarWhenPushed = YES;
     self.navigationController.navigationBar.backgroundColor = [UIColor whiteColor];
     mapid = 1;
-    
+
     _curFloorId = -1;
     _curMapLoadMode = nil;
     _mapLoadInitFloorId = -1;
-    
+
     _mapview = [[iIndoorMapView alloc] initWithFrame:CGRectMake(0, 64, self.view.bounds.size.width, self.view.bounds.size.height-64)];
     [_mapview registerEventListener:self];
-    
+
     [self.view addSubview:_mapview];
     [self reloadMap];
-    
+
     UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithTitle:@"设置"
                                                                  style:UIBarButtonItemStylePlain
                                                                 target:self
                                                                 action:@selector(settingClick)];
     self.navigationItem.leftBarButtonItem = leftItem;
-    
+
     _searchBar = [[UISearchBar alloc]initWithFrame:CGRectMake(0.0f,0.0f,255.0f,25.0f)];
     _searchBar.delegate = self;
     _searchBar.backgroundColor = [UIColor clearColor];
@@ -71,7 +71,7 @@
     _searchBar.placeholder= @"请输入店铺或展台名称";
     _searchBar.layer.cornerRadius = 5;
     _searchBar.layer.masksToBounds = YES;
-    
+
     //将搜索条放在一个UIView上
     UIView *searchView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 255, 25)];
     searchView.backgroundColor = [UIColor clearColor];
@@ -80,6 +80,10 @@
 
     [self addOverlayButtons];
     [self addAreaButtons];
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -405,5 +409,15 @@
     NSLog(@"%s, %d[%@-%@], %dx%d", __FUNCTION__, floor.floorID, floor.buildingName, floor.floorName, (int)floor.pixelWidth, (int)floor.pixelHeight);
     _curFloorId = floor.floorID;
     [self checkAreaDisplay:floor];
+}
+
+-(void) enterBackgroundMode
+{
+    [_mapview pauseMap];
+}
+
+-(void) resumeFromBackgroundMode
+{
+    [_mapview resumeMap];
 }
 @end

@@ -22,6 +22,7 @@
 
 @interface iIndoorMapViewController : UIViewController
 
-
+-(void) enterBackgroundMode;
+-(void) resumeFromBackgroundMode;
 @end
 

@@ -37,6 +37,14 @@
  */
 - (void)setMapServer:(NSString *)mapServer;
 /**
+ * @brief 重新初始化地图
+ *
+ * @param 无
+ *
+ * @return 无
+ */
+- (void)reInitMapView;
+/**
  * @brief 销毁地图
  *
  * @param 无
@@ -101,13 +109,21 @@
  */
 - (BOOL)checkUpdateForMap:(int)mapID;
 /**
- * @brief 暂停地图，用于地图在后台的情况
+ * @brief 暂停地图，用于处理地图进入后台
  *
  * @param 无
  *
  * @return 无
  */
 - (void)pauseMap;
+/**
+ * @brief 恢复地图，用于地图从后台恢复
+ *
+ * @param 无
+ *
+ * @return 无
+ */
+- (void)resumeMap;
 /**
  * @brief 获取当前正在显示的地图大小
  *
@@ -323,6 +339,14 @@
  * @return 无
  */
 - (void)enableSmoothRoute:(BOOL)enable;
+/**
+ * @brief 控制SDK统计信息开关，如采集异常信息用于解决兼容性问题及优化体验，默认为开启。
+ *
+ * @param enable 开启置为YES
+ *
+ * @return 无
+ */
+- (void)enableStats:(BOOL)enabled;
 /**
  * @brief 获取native map view
  *
