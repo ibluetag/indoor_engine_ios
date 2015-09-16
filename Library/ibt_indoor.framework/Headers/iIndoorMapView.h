@@ -304,8 +304,10 @@
  */
 - (void)setLocateTarget:(NSString *)mac;
 //for test
-//- (int) doLoatingWithFloorID: (int) id X: (float) x Y: (float) y;
-//- (int) clearLocating;
+/*
+- (int) doLoatingWithFloorID: (int) id X: (float) x Y: (float) y;
+- (int) setLoatedPositionWithID: (int) id X: (float) x Y: (float) y;
+- (int) clearLocating;*/
 
 /**
  * @brief 设置路径吸附距离阈值。

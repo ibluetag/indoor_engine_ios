@@ -44,7 +44,7 @@
     self.navigationItem.leftBarButtonItem = leftItem;
     self.navigationItem.title = @"设置";
     
-    NSArray *dataArray = [[NSArray alloc]initWithObjects:@"电梯优先", @"扶梯优先", @"楼梯优先", nil];
+    NSArray *dataArray = [[NSArray alloc]initWithObjects:@"电梯优先", @"扶梯优先", @"楼梯优先", @"距离最短", nil];
     _routeRuleData = dataArray;
     
     _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height-64)];
@@ -230,8 +230,8 @@
 
 -(void) buttonTest1
 {
-    int floorID = 42, eventID = 1;
-    NSString *label = @"B8103";
+    int floorID = 29, eventID = 3;
+    NSString *label = @"ND8031";
 
     [self.mapView loadMap:eventID WithFloor:floorID POISelected:label];
     NSMutableDictionary *dict = [[NSMutableDictionary alloc]init];
@@ -244,8 +244,8 @@
 -(void) buttonTest2
 {
     
-    int floorID = 10, eventID = 1;
-    NSString *label = @"C8012";
+    int floorID = 29, eventID = 3;
+    NSString *label = @"ND8029";
 
     //[self.mapView doLoatingWithFloorID:41 X:100.0 Y:200.0];
     [self.mapView loadMap:eventID WithFloor:floorID POIRouting:label];
@@ -349,8 +349,7 @@
     if ([[routeDeviateThreshold stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] length] == 0) {
         routeDeviateThreshold = [NSString stringWithFormat:@"%f", DEFAULT_ROUTE_DEVIATE_THRESHOLD];
     }
-    
-    
+
     [userDefaults setObject:mapServer forKey:@"mapServer"];
     [userDefaults setInteger:[mapSubjectId intValue] forKey:@"mapSubjectId"];
     [userDefaults setObject:[locateTarget uppercaseString] forKey:@"locateTarget"];
@@ -373,6 +372,7 @@
     _routeDeviateThresholdTF.text = [NSString stringWithFormat:@"%.1f", [userDefaultes floatForKey:@"routeDeviateThreshold"]];
     _currentRouteRule = [userDefaultes integerForKey:@"routeRule"];
     _routeRuleTF.text = [_routeRuleData objectAtIndex:_currentRouteRule];
+    [_routeRulePicker selectRow:_currentRouteRule inComponent:0 animated:YES];
     [_routeSmootherSwitch setOn:([userDefaultes integerForKey:@"routeSmooth"] != 0)];
 }
 

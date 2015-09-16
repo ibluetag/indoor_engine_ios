@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6BEA291A1B68EAF400CE8FC0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BEA29191B68EAF400CE8FC0 /* main.m */; };
-		6BEA29341B68EAF400CE8FC0 /* iIndoorMapViewFrameWorkTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BEA29331B68EAF400CE8FC0 /* iIndoorMapViewFrameWorkTestTests.m */; };
 		6BEA29431B68EB3000CE8FC0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BEA293E1B68EB3000CE8FC0 /* AppDelegate.m */; };
 		6BEA29441B68EB3000CE8FC0 /* iIndoorMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BEA29401B68EB3000CE8FC0 /* iIndoorMapViewController.m */; };
 		6BEA29451B68EB3000CE8FC0 /* iMapSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BEA29421B68EB3000CE8FC0 /* iMapSettingViewController.m */; };
@@ -18,16 +17,6 @@
 		84914EFA1B6B3EE900B1BA3B /* ibt_indoor.framework in Resources */ = {isa = PBXBuildFile; fileRef = 84914EF81B6B3EE300B1BA3B /* ibt_indoor.framework */; };
 		84914EFB1B6B3EF200B1BA3B /* ibt_indoor.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84914EF81B6B3EE300B1BA3B /* ibt_indoor.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		6BEA292E1B68EAF400CE8FC0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6BEA290C1B68EAF300CE8FC0 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6BEA29131B68EAF400CE8FC0;
-			remoteInfo = test_ibt_indoor;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		84EC972F1B6B1E6300A9F428 /* CopyFiles */ = {
@@ -48,7 +37,6 @@
 		6BEA29191B68EAF400CE8FC0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6BEA29241B68EAF400CE8FC0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6BEA29271B68EAF400CE8FC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		6BEA292D1B68EAF400CE8FC0 /* test_ibt_indoorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = test_ibt_indoorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BEA29321B68EAF400CE8FC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6BEA29331B68EAF400CE8FC0 /* iIndoorMapViewFrameWorkTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iIndoorMapViewFrameWorkTestTests.m; sourceTree = "<group>"; };
 		6BEA293D1B68EB3000CE8FC0 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -73,13 +61,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6BEA292A1B68EAF400CE8FC0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -97,7 +78,6 @@
 			isa = PBXGroup;
 			children = (
 				6BEA29141B68EAF400CE8FC0 /* test_ibt_indoor.app */,
-				6BEA292D1B68EAF400CE8FC0 /* test_ibt_indoorTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -167,24 +147,6 @@
 			productReference = 6BEA29141B68EAF400CE8FC0 /* test_ibt_indoor.app */;
 			productType = "com.apple.product-type.application";
 		};
-		6BEA292C1B68EAF400CE8FC0 /* test_ibt_indoorTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6BEA293A1B68EAF400CE8FC0 /* Build configuration list for PBXNativeTarget "test_ibt_indoorTests" */;
-			buildPhases = (
-				6BEA29291B68EAF400CE8FC0 /* Sources */,
-				6BEA292A1B68EAF400CE8FC0 /* Frameworks */,
-				6BEA292B1B68EAF400CE8FC0 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				6BEA292F1B68EAF400CE8FC0 /* PBXTargetDependency */,
-			);
-			name = test_ibt_indoorTests;
-			productName = test_ibt_indoorTests;
-			productReference = 6BEA292D1B68EAF400CE8FC0 /* test_ibt_indoorTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -196,10 +158,6 @@
 				TargetAttributes = {
 					6BEA29131B68EAF400CE8FC0 = {
 						CreatedOnToolsVersion = 6.3.2;
-					};
-					6BEA292C1B68EAF400CE8FC0 = {
-						CreatedOnToolsVersion = 6.3.2;
-						TestTargetID = 6BEA29131B68EAF400CE8FC0;
 					};
 				};
 			};
@@ -217,7 +175,6 @@
 			projectRoot = "";
 			targets = (
 				6BEA29131B68EAF400CE8FC0 /* test_ibt_indoor */,
-				6BEA292C1B68EAF400CE8FC0 /* test_ibt_indoorTests */,
 			);
 		};
 /* End PBXProject section */
@@ -228,13 +185,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				84914EFA1B6B3EE900B1BA3B /* ibt_indoor.framework in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6BEA292B1B68EAF400CE8FC0 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,23 +202,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6BEA29291B68EAF400CE8FC0 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6BEA29341B68EAF400CE8FC0 /* iIndoorMapViewFrameWorkTestTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		6BEA292F1B68EAF400CE8FC0 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 6BEA29131B68EAF400CE8FC0 /* test_ibt_indoor */;
-			targetProxy = 6BEA292E1B68EAF400CE8FC0 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		6BEA29261B68EAF400CE8FC0 /* LaunchScreen.xib */ = {
@@ -299,7 +233,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Yufeng Zheng (9YY96L4TYQ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Yufeng Zheng (9YY96L4TYQ)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -321,6 +256,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "2640630e-e0f6-48cf-80e0-b6a9fa9a2cc7";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -343,7 +279,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Yufeng Zheng (9YY96L4TYQ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Yufeng Zheng (9YY96L4TYQ)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -358,6 +295,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "2640630e-e0f6-48cf-80e0-b6a9fa9a2cc7";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -394,40 +332,6 @@
 			};
 			name = Release;
 		};
-		6BEA293B1B68EAF400CE8FC0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = test_ibt_indoorTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/test_ibt_indoor.app/test_ibt_indoor";
-			};
-			name = Debug;
-		};
-		6BEA293C1B68EAF400CE8FC0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = test_ibt_indoorTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/test_ibt_indoor.app/test_ibt_indoor";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -445,15 +349,6 @@
 			buildConfigurations = (
 				6BEA29381B68EAF400CE8FC0 /* Debug */,
 				6BEA29391B68EAF400CE8FC0 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		6BEA293A1B68EAF400CE8FC0 /* Build configuration list for PBXNativeTarget "test_ibt_indoorTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6BEA293B1B68EAF400CE8FC0 /* Debug */,
-				6BEA293C1B68EAF400CE8FC0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
