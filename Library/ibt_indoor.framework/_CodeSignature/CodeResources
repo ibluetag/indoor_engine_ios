@@ -120,6 +120,10 @@
 		<data>
 		C8thw7rsXOJZhLEabIHw4jlIIfI=
 		</data>
+		<key>Headers/iIndoorLocator.h</key>
+		<data>
+		s/OXCHpL37vL19qxF3gcfp1sjNM=
+		</data>
 		<key>Headers/iIndoorMapBitmapOverlay.h</key>
 		<data>
 		TEn5e+/CvsrJ7TnISmPIh5d0xbE=
@@ -166,7 +170,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		5QostC5D2zx3Cpi+AIB2Tegj4MA=
+		d+6orcJIHkoebwOyUGqYE7z+st8=
 		</data>
 		<key>asserts_overlay1.png</key>
 		<data>
@@ -386,6 +390,10 @@
 		<key>210.png</key>
 		<data>
 		C8thw7rsXOJZhLEabIHw4jlIIfI=
+		</data>
+		<key>Headers/iIndoorLocator.h</key>
+		<data>
+		s/OXCHpL37vL19qxF3gcfp1sjNM=
 		</data>
 		<key>Headers/iIndoorMapBitmapOverlay.h</key>
 		<data>

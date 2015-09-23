@@ -11,7 +11,6 @@
 		6BEA29431B68EB3000CE8FC0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BEA293E1B68EB3000CE8FC0 /* AppDelegate.m */; };
 		6BEA29441B68EB3000CE8FC0 /* iIndoorMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BEA29401B68EB3000CE8FC0 /* iIndoorMapViewController.m */; };
 		6BEA29451B68EB3000CE8FC0 /* iMapSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BEA29421B68EB3000CE8FC0 /* iMapSettingViewController.m */; };
-		6BEA29491B68EB7000CE8FC0 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BEA29481B68EB7000CE8FC0 /* libstdc++.dylib */; };
 		6BEA294B1B68EB8700CE8FC0 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BEA294A1B68EB8700CE8FC0 /* libz.dylib */; };
 		84914EF91B6B3EE300B1BA3B /* ibt_indoor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84914EF81B6B3EE300B1BA3B /* ibt_indoor.framework */; };
 		84914EFA1B6B3EE900B1BA3B /* ibt_indoor.framework in Resources */ = {isa = PBXBuildFile; fileRef = 84914EF81B6B3EE300B1BA3B /* ibt_indoor.framework */; };
@@ -45,7 +44,6 @@
 		6BEA29401B68EB3000CE8FC0 /* iIndoorMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iIndoorMapViewController.m; sourceTree = "<group>"; };
 		6BEA29411B68EB3000CE8FC0 /* iMapSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iMapSettingViewController.h; sourceTree = "<group>"; };
 		6BEA29421B68EB3000CE8FC0 /* iMapSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iMapSettingViewController.m; sourceTree = "<group>"; };
-		6BEA29481B68EB7000CE8FC0 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 		6BEA294A1B68EB8700CE8FC0 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		84914EF81B6B3EE300B1BA3B /* ibt_indoor.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ibt_indoor.framework; path = ../../framework/ibt_indoor.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -57,7 +55,6 @@
 			files = (
 				84914EF91B6B3EE300B1BA3B /* ibt_indoor.framework in Frameworks */,
 				6BEA294B1B68EB8700CE8FC0 /* libz.dylib in Frameworks */,
-				6BEA29491B68EB7000CE8FC0 /* libstdc++.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,7 +99,6 @@
 			isa = PBXGroup;
 			children = (
 				6BEA294A1B68EB8700CE8FC0 /* libz.dylib */,
-				6BEA29481B68EB7000CE8FC0 /* libstdc++.dylib */,
 				6BEA29181B68EAF400CE8FC0 /* Info.plist */,
 				6BEA29191B68EAF400CE8FC0 /* main.m */,
 			);
@@ -158,6 +154,7 @@
 				TargetAttributes = {
 					6BEA29131B68EAF400CE8FC0 = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = 9YY96L4TYQ;
 					};
 				};
 			};
@@ -306,14 +303,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/test_ibt_indoor",
 					../../framework,
 				);
 				INFOPLIST_FILE = test_ibt_indoor/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -321,14 +322,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/test_ibt_indoor",
 					../../framework,
 				);
 				INFOPLIST_FILE = test_ibt_indoor/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

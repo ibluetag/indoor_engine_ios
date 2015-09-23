@@ -35,6 +35,8 @@
     [defaultValues setObject:[NSNumber numberWithInt:AREA_ALL] forKey:@"initialArea"];
     [userDefaults registerDefaults:defaultValues];
     [userDefaults synchronize];
+
+    NSLog(@"%s, set application default params", __FUNCTION__);
     return YES;
 }
 
