@@ -12,23 +12,11 @@
 		6BEA29441B68EB3000CE8FC0 /* iIndoorMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BEA29401B68EB3000CE8FC0 /* iIndoorMapViewController.m */; };
 		6BEA29451B68EB3000CE8FC0 /* iMapSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BEA29421B68EB3000CE8FC0 /* iMapSettingViewController.m */; };
 		6BEA294B1B68EB8700CE8FC0 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BEA294A1B68EB8700CE8FC0 /* libz.dylib */; };
-		84914EF91B6B3EE300B1BA3B /* ibt_indoor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84914EF81B6B3EE300B1BA3B /* ibt_indoor.framework */; };
-		84914EFA1B6B3EE900B1BA3B /* ibt_indoor.framework in Resources */ = {isa = PBXBuildFile; fileRef = 84914EF81B6B3EE300B1BA3B /* ibt_indoor.framework */; };
-		84914EFB1B6B3EF200B1BA3B /* ibt_indoor.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84914EF81B6B3EE300B1BA3B /* ibt_indoor.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		84650EC61BC7B1BC00411CEC /* indoor_resource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 84650EC51BC7B1BC00411CEC /* indoor_resource.bundle */; };
+		84E4BCBE1BCB6450005EA19F /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E4BCBD1BCB6450005EA19F /* libc++.dylib */; };
+		84E4BCC01BCB6471005EA19F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E4BCBF1BCB6471005EA19F /* CoreLocation.framework */; };
+		84E4BCC11BCB6DEE005EA19F /* ibt_indoor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84914EF81B6B3EE300B1BA3B /* ibt_indoor.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		84EC972F1B6B1E6300A9F428 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				84914EFB1B6B3EF200B1BA3B /* ibt_indoor.framework in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		6BEA29141B68EAF400CE8FC0 /* test_ibt_indoor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test_ibt_indoor.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,7 +33,10 @@
 		6BEA29411B68EB3000CE8FC0 /* iMapSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iMapSettingViewController.h; sourceTree = "<group>"; };
 		6BEA29421B68EB3000CE8FC0 /* iMapSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iMapSettingViewController.m; sourceTree = "<group>"; };
 		6BEA294A1B68EB8700CE8FC0 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		84650EC51BC7B1BC00411CEC /* indoor_resource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = indoor_resource.bundle; path = ../../framework/ibt_indoor.framework/indoor_resource.bundle; sourceTree = "<group>"; };
 		84914EF81B6B3EE300B1BA3B /* ibt_indoor.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ibt_indoor.framework; path = ../../framework/ibt_indoor.framework; sourceTree = "<group>"; };
+		84E4BCBD1BCB6450005EA19F /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		84E4BCBF1BCB6471005EA19F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +44,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84914EF91B6B3EE300B1BA3B /* ibt_indoor.framework in Frameworks */,
+				84E4BCC11BCB6DEE005EA19F /* ibt_indoor.framework in Frameworks */,
+				84E4BCC01BCB6471005EA19F /* CoreLocation.framework in Frameworks */,
+				84E4BCBE1BCB6450005EA19F /* libc++.dylib in Frameworks */,
 				6BEA294B1B68EB8700CE8FC0 /* libz.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -64,6 +57,9 @@
 		6BEA290B1B68EAF300CE8FC0 = {
 			isa = PBXGroup;
 			children = (
+				84E4BCBF1BCB6471005EA19F /* CoreLocation.framework */,
+				84E4BCBD1BCB6450005EA19F /* libc++.dylib */,
+				84650EC51BC7B1BC00411CEC /* indoor_resource.bundle */,
 				84914EF81B6B3EE300B1BA3B /* ibt_indoor.framework */,
 				6BEA29161B68EAF400CE8FC0 /* test_ibt_indoor */,
 				6BEA29301B68EAF400CE8FC0 /* test_ibt_indoorTests */,
@@ -132,7 +128,6 @@
 				6BEA29101B68EAF400CE8FC0 /* Sources */,
 				6BEA29111B68EAF400CE8FC0 /* Frameworks */,
 				6BEA29121B68EAF400CE8FC0 /* Resources */,
-				84EC972F1B6B1E6300A9F428 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -181,7 +176,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84914EFA1B6B3EE900B1BA3B /* ibt_indoor.framework in Resources */,
+				84650EC61BC7B1BC00411CEC /* indoor_resource.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,15 +298,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/test_ibt_indoor",
 					../../framework,
+					/Users/admin/lhwei/development/github_src/maps/indoor_sdk/ios/framework,
 				);
 				INFOPLIST_FILE = test_ibt_indoor/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -322,15 +319,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/test_ibt_indoor",
 					../../framework,
+					/Users/admin/lhwei/development/github_src/maps/indoor_sdk/ios/framework,
 				);
 				INFOPLIST_FILE = test_ibt_indoor/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

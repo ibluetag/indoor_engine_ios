@@ -190,12 +190,12 @@
 
 - (void)addOverlay
 {
-    UIImage *image1 = [UIImage imageNamed:@"ibt_indoor.framework/asserts_overlay1.png"];
+    UIImage *image1 = [UIImage imageNamed:@"indoor_resource.bundle/asserts_overlay1.png"];
     _overlay1 = [[iIndoorMapBitmapOverlay alloc] initWithMapView:_mapview AndBitmap:image1];
     [_overlay1 setX:200.0 AndY:200.0];
     [_overlay1 attachToMap];
 
-    UIImage *image2 = [UIImage imageNamed:@"ibt_indoor.framework/asserts_overlay2.png"];
+    UIImage *image2 = [UIImage imageNamed:@"indoor_resource.bundle/asserts_overlay2.png"];
     _overlay2 = [[iIndoorMapBitmapOverlay alloc] initWithMapView:_mapview AndBitmap:image2];
     [_overlay2 setX:800.0 AndY:300.0];
     [_overlay2 attachToMap];
@@ -209,7 +209,7 @@
         [button setTitle:@"点击隐藏" forState:UIControlStateNormal];
         [button setTitleColor:[UIColor groupTableViewBackgroundColor] forState:UIControlStateDisabled];
         [button setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
-        [button setBackgroundImage:[UIImage imageNamed:@"ibt_indoor.framework/asserts_overlay3.png"] forState:UIControlStateNormal];
+        [button setBackgroundImage:[UIImage imageNamed:@"indoor_resource.bundle/asserts_overlay3.png"] forState:UIControlStateNormal];
         button.titleLabel.font = [UIFont systemFontOfSize:24];
         //[button setImageEdgeInsets:UIEdgeInsetsMake(5, 0, 5, 5)];
         //[button setTitleEdgeInsets:UIEdgeInsetsMake(0, 5, 0, 0)];

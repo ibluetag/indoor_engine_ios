@@ -1,9 +1,10 @@
 # iBT Indoor iOS SDK
 
 #SDK使用步骤
-#1. 将解压开发包并将.framework文件拖入您的工程
-#2. 引用头文件并进行相应的接口调用
-#3. 具体API说明请参见包内离线文档
+#1. 解压开发包,并将Library目录下的ibt_indoor.framework文件拖入您的工程(device_version对应真机调试版本,simulator_version对应模拟器版本)
+#2. 将framework/indoor_resource.bundle加入到"copy Bundle Resources"
+#3. 引用头文件并进行相应的接口调用
+#4. 具体API说明请参见包内离线文档
 
 
 #SDK基本布局
