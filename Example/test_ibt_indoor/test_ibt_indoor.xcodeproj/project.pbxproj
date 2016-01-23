@@ -11,11 +11,12 @@
 		6BEA29431B68EB3000CE8FC0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BEA293E1B68EB3000CE8FC0 /* AppDelegate.m */; };
 		6BEA29441B68EB3000CE8FC0 /* iIndoorMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BEA29401B68EB3000CE8FC0 /* iIndoorMapViewController.m */; };
 		6BEA29451B68EB3000CE8FC0 /* iMapSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BEA29421B68EB3000CE8FC0 /* iMapSettingViewController.m */; };
-		6BEA294B1B68EB8700CE8FC0 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BEA294A1B68EB8700CE8FC0 /* libz.dylib */; };
-		84650EC61BC7B1BC00411CEC /* indoor_resource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 84650EC51BC7B1BC00411CEC /* indoor_resource.bundle */; };
-		84E4BCBE1BCB6450005EA19F /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E4BCBD1BCB6450005EA19F /* libc++.dylib */; };
+		84B9CBC11C53D4C600DF30FD /* indoor_resource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 84B9CBC01C53D4C600DF30FD /* indoor_resource.bundle */; };
+		84B9CBC51C53D51100DF30FD /* ibt_indoor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B9CBC41C53D51100DF30FD /* ibt_indoor.framework */; };
+		84B9CBC71C53D66000DF30FD /* libc.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B9CBC61C53D66000DF30FD /* libc.tbd */; };
+		84B9CBC91C53D67200DF30FD /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B9CBC81C53D67200DF30FD /* libstdc++.tbd */; };
+		84B9CBCB1C53D74200DF30FD /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B9CBCA1C53D74200DF30FD /* libz.tbd */; };
 		84E4BCC01BCB6471005EA19F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E4BCBF1BCB6471005EA19F /* CoreLocation.framework */; };
-		84E4BCC11BCB6DEE005EA19F /* ibt_indoor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84914EF81B6B3EE300B1BA3B /* ibt_indoor.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,9 +34,11 @@
 		6BEA29411B68EB3000CE8FC0 /* iMapSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iMapSettingViewController.h; sourceTree = "<group>"; };
 		6BEA29421B68EB3000CE8FC0 /* iMapSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iMapSettingViewController.m; sourceTree = "<group>"; };
 		6BEA294A1B68EB8700CE8FC0 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
-		84650EC51BC7B1BC00411CEC /* indoor_resource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = indoor_resource.bundle; path = ../../framework/ibt_indoor.framework/indoor_resource.bundle; sourceTree = "<group>"; };
-		84914EF81B6B3EE300B1BA3B /* ibt_indoor.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ibt_indoor.framework; path = ../../framework/ibt_indoor.framework; sourceTree = "<group>"; };
-		84E4BCBD1BCB6450005EA19F /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		84B9CBC01C53D4C600DF30FD /* indoor_resource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = indoor_resource.bundle; path = ../../Library/device_version/ibt_indoor.framework/indoor_resource.bundle; sourceTree = "<group>"; };
+		84B9CBC41C53D51100DF30FD /* ibt_indoor.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ibt_indoor.framework; path = ../../Library/device_version/ibt_indoor.framework; sourceTree = "<group>"; };
+		84B9CBC61C53D66000DF30FD /* libc.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libc.tbd; path = usr/lib/libc.tbd; sourceTree = SDKROOT; };
+		84B9CBC81C53D67200DF30FD /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		84B9CBCA1C53D74200DF30FD /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		84E4BCBF1BCB6471005EA19F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -44,10 +47,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84E4BCC11BCB6DEE005EA19F /* ibt_indoor.framework in Frameworks */,
+				84B9CBCB1C53D74200DF30FD /* libz.tbd in Frameworks */,
+				84B9CBC91C53D67200DF30FD /* libstdc++.tbd in Frameworks */,
+				84B9CBC71C53D66000DF30FD /* libc.tbd in Frameworks */,
+				84B9CBC51C53D51100DF30FD /* ibt_indoor.framework in Frameworks */,
 				84E4BCC01BCB6471005EA19F /* CoreLocation.framework in Frameworks */,
-				84E4BCBE1BCB6450005EA19F /* libc++.dylib in Frameworks */,
-				6BEA294B1B68EB8700CE8FC0 /* libz.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,10 +61,12 @@
 		6BEA290B1B68EAF300CE8FC0 = {
 			isa = PBXGroup;
 			children = (
+				84B9CBCA1C53D74200DF30FD /* libz.tbd */,
+				84B9CBC81C53D67200DF30FD /* libstdc++.tbd */,
+				84B9CBC61C53D66000DF30FD /* libc.tbd */,
+				84B9CBC41C53D51100DF30FD /* ibt_indoor.framework */,
+				84B9CBC01C53D4C600DF30FD /* indoor_resource.bundle */,
 				84E4BCBF1BCB6471005EA19F /* CoreLocation.framework */,
-				84E4BCBD1BCB6450005EA19F /* libc++.dylib */,
-				84650EC51BC7B1BC00411CEC /* indoor_resource.bundle */,
-				84914EF81B6B3EE300B1BA3B /* ibt_indoor.framework */,
 				6BEA29161B68EAF400CE8FC0 /* test_ibt_indoor */,
 				6BEA29301B68EAF400CE8FC0 /* test_ibt_indoorTests */,
 				6BEA29151B68EAF400CE8FC0 /* Products */,
@@ -176,7 +182,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84650EC61BC7B1BC00411CEC /* indoor_resource.bundle in Resources */,
+				84B9CBC11C53D4C600DF30FD /* indoor_resource.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,11 +307,11 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/test_ibt_indoor",
-					../../framework,
-					/Users/admin/lhwei/development/github_src/maps/indoor_sdk/ios/framework,
+					../../Library/device_version,
 				);
 				INFOPLIST_FILE = test_ibt_indoor/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -322,11 +328,11 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/test_ibt_indoor",
-					../../framework,
-					/Users/admin/lhwei/development/github_src/maps/indoor_sdk/ios/framework,
+					../../Library/device_version,
 				);
 				INFOPLIST_FILE = test_ibt_indoor/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;

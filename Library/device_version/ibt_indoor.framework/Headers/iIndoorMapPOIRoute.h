@@ -54,6 +54,26 @@
 - (void) setRouteEndPOI:(int64_t)id;
 
 /**
+ * @brief 在当前地图中设置导航起点位置
+ *
+ * @param x 起点的x坐标
+ *        y 起点的y坐标
+ *
+ * @return 无
+ */
+- (void) setRouteStartPositionX:(float)x AndY: (float) y;
+
+/**
+ * @brief 在当前地图中设置导航终点位置
+ *
+ * @param x 终点的x坐标
+ *        y 终点的y坐标
+ *
+ * @return 无
+ */
+- (void) setRouteEndPositionX:(float)x AndY: (float) y;
+
+/**
  * @brief 计算导航路径
  *
  * @param 无
@@ -61,5 +81,20 @@
  * @return 无
  */
 - (void) calc;
+
+/**
+ * @brief 清除导航路径
+ *
+ * @param 无
+ *
+ * @return 无
+ */
+- (void) clear;
+
+//set locating bitmap
+- (void) setLocationAngleBitmap: (bool) angle;
+
+//get the bitmap of locating
+- (bool) getLocationAngleBitmap;
 
 @end
